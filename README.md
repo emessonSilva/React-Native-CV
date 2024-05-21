@@ -1,6 +1,6 @@
 # React Native Profile App
 
-This is a simple React Native application showcasing a profile with tabs for different sections like profile information, experience, and education.
+This is a simple React Native application showcasing a profile with tabs for different sections like profile information, experience and education.
 
 ## Installation
 
