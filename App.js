@@ -57,7 +57,6 @@ function ProfileScreen() {
 function ExperienceScreen() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.header}>Experience</Text>
       <Text style={styles.subheader}>
         Bilingual Customer Support Agent at Speed+
       </Text>
@@ -90,7 +89,6 @@ function ExperienceScreen() {
 function EducationScreen() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.header}>Education</Text>
       <Text style={styles.subheader}>
         Degree in Analysis and Systems Development
       </Text>
@@ -123,7 +121,9 @@ export default function App() {
               iconName = focused ? "school" : "school-outline";
             }
 
-            return <Ionicons name={iconName} size={size} color={color} />;
+            const iconSize = focused ? 30 : 25;
+
+            return <Ionicons name={iconName} size={iconSize} color={color} />;
           },
           tabBarActiveTintColor: "#008080",
           tabBarInactiveTintColor: "gray",
@@ -131,6 +131,11 @@ export default function App() {
             backgroundColor: "#f8f8f8",
             borderTopWidth: 0,
           },
+
+          headerStyle: {
+            backgroundColor: "#008080",
+          },
+          headerTintColor: "#fff",
         })}
       >
         <Tab.Screen name="Profile" component={ProfileScreen} />
@@ -178,6 +183,8 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     borderRadius: 75,
+    borderWidth: 2,
+    borderColor: "#008080",
     alignSelf: "center",
     marginBottom: 20,
   },
